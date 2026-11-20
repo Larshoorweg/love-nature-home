@@ -1,11 +1,13 @@
 // Contact form endpoint for the Love Nature Krabi website.
-// Sends the message to the team inbox through Resend.
+// Sends the message to the team inbox through SendGrid (Twilio).
 //
 // Environment variables (set in Vercel, never in the repo):
-//   RESEND_API_KEY  required. A Resend API key with sending access.
-//   CONTACT_FROM    required. A sender on a domain verified in Resend,
-//                   e.g. "Love Nature Krabi Website <website@lovenaturekrabi.com>".
-//   CONTACT_TO      optional. Defaults to contact@lovenaturekrabi.com.
+//   SENDGRID_API_KEY   required. A SendGrid API key with "Mail Send" access.
+//   CONTACT_FROM       required. The sender email address: a verified single
+//                      sender or an address on a domain authenticated in SendGrid,
+//                      e.g. website@lovenaturekrabi.com.
+//   CONTACT_FROM_NAME  optional. Defaults to "Love Nature Krabi Website".
+//   CONTACT_TO         optional. Defaults to contact@lovenaturekrabi.com.
 
 const MAX = { name: 120, email: 200, phone: 60, tour: 200, dates: 120, message: 5000 };
 
@@ -48,11 +50,12 @@ module.exports = async function handler(req, res) {
     return res.status(422).json({ ok: false, error: 'invalid_fields' });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = process.env.SENDGRID_API_KEY;
   const from = process.env.CONTACT_FROM;
+  const fromName = process.env.CONTACT_FROM_NAME || 'Love Nature Krabi Website';
   const to = process.env.CONTACT_TO || 'contact@lovenaturekrabi.com';
   if (!apiKey || !from) {
-    console.error('contact: RESEND_API_KEY or CONTACT_FROM is not set');
+    console.error('contact: SENDGRID_API_KEY or CONTACT_FROM is not set');
     return res.status(500).json({ ok: false, error: 'not_configured' });
   }
 
@@ -71,26 +74,29 @@ module.exports = async function handler(req, res) {
     `<p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap">${esc(message)}</p>`;
 
   try {
-    const r = await fetch('https://api.resend.com/emails', {
+    const r = await fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: email,
+        personalizations: [{ to: [{ email: to }] }],
+        from: { email: from, name: fromName },
+        reply_to: { email, name },
         subject: `Website message from ${name}`,
-        text,
-        html,
+        content: [
+          { type: 'text/plain', value: text },
+          { type: 'text/html', value: html },
+        ],
       }),
     });
+    // SendGrid answers 202 Accepted with an empty body when it takes the message.
     if (!r.ok) {
       const detail = await r.text();
-      console.error('contact: Resend refused the message', r.status, detail.slice(0, 500));
+      console.error('contact: SendGrid refused the message', r.status, detail.slice(0, 500));
       return res.status(502).json({ ok: false, error: 'send_failed' });
     }
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('contact: request to Resend failed', err && err.message);
+    console.error('contact: request to SendGrid failed', err && err.message);
     return res.status(502).json({ ok: false, error: 'send_failed' });
   }
 };
