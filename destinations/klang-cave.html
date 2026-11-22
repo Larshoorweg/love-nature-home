@@ -525,14 +525,21 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FFFFFF}
 .mapbox{overflow:hidden;border-radius:28px;background:#E9F1EC;padding:0}
 .mapbox iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.skip{position:absolute;left:12px;top:-80px;z-index:1000;background:#2E5C43;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
+:where(img[width][height]){width:auto;height:auto}
+a.chip{position:relative}
+a.chip::after{content:"";position:absolute;left:0;right:0;top:-9px;bottom:-9px}
 
 </style>
 </head>
 <body>
 <div class="lnk" data-lnk="1">
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav">
 <div class="wrap nav-in">
-<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 21vw, 78px"></a>
 <nav class="nav-links" aria-label="Main">
 <a class="nl" href="/">Home</a>
 <a class="nl" href="https://lovenaturekrabi.jaithaitravel.com">Tours</a>
@@ -618,11 +625,11 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 
 
 <section class="dt-hero" id="top">
-<div class="hero-bg"><img src="/assets/places/klang-cave.jpg" alt="" style="object-position: 50% 50%"></div>
+<div class="hero-bg"><img src="/assets/places/klang-cave.jpg" alt="" style="object-position: 50% 50%" width="840" height="1204" srcset="/assets/places/klang-cave-400.webp 400w, /assets/places/klang-cave-640.webp 640w, /assets/places/klang-cave-840.webp 840w" sizes="(max-width: 719px) 100vw, 100vw"></div>
 <div class="dt-shade"></div>
 <div class="wrap dt-hero-in">
 <nav class="crumbs" aria-label="Breadcrumb" data-rv="1"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/destinations">Destinations</a><span aria-hidden="true">/</span><span aria-current="page">Klang Cave</span></nav>
@@ -645,9 +652,9 @@ body{margin:0;background:#FFFFFF}
 <p data-rv="1">This is a day for people who are curious and do not mind the dark. It suits travellers who want something other than a beach, and it works well on a day when the sea is rough.</p>
 </div>
 <div class="gal" data-rv="r">
-<div class="ph g-main"><img loading="lazy" decoding="async" src="/assets/places/klang-cave.jpg" alt="A child in a helmet looking up at the formations inside Klang Cave"></div>
-<div class="ph"><img loading="lazy" decoding="async" src="/assets/photos/klang-cave-1.jpg" alt="Exploring the chambers of Klang Cave by headlamp"></div>
-<div class="ph"><img loading="lazy" decoding="async" src="/assets/photos/klang-cave-2.jpg" alt="Formations inside Tham Khlang"></div>
+<div class="ph g-main"><img loading="lazy" decoding="async" src="/assets/places/klang-cave.jpg" alt="A child in a helmet looking up at the formations inside Klang Cave" width="840" height="1204" srcset="/assets/places/klang-cave-400.webp 400w, /assets/places/klang-cave-640.webp 640w, /assets/places/klang-cave-840.webp 840w" sizes="(max-width: 719px) 90vw, 254px"></div>
+<div class="ph"><img loading="lazy" decoding="async" src="/assets/photos/klang-cave-1.jpg" alt="Exploring the chambers of Klang Cave by headlamp" width="1448" height="1086" srcset="/assets/photos/klang-cave-1-400.webp 400w, /assets/photos/klang-cave-1-640.webp 640w, /assets/photos/klang-cave-1-960.webp 960w, /assets/photos/klang-cave-1-1280.webp 1280w, /assets/photos/klang-cave-1-1448.webp 1448w" sizes="(max-width: 719px) 44vw, 235px"></div>
+<div class="ph"><img loading="lazy" decoding="async" src="/assets/photos/klang-cave-2.jpg" alt="Formations inside Tham Khlang" width="1448" height="1086" srcset="/assets/photos/klang-cave-2-400.webp 400w, /assets/photos/klang-cave-2-640.webp 640w, /assets/photos/klang-cave-2-960.webp 960w, /assets/photos/klang-cave-2-1280.webp 1280w, /assets/photos/klang-cave-2-1448.webp 1448w" sizes="(max-width: 719px) 44vw, 235px"></div>
 </div>
 </div>
 </section>
@@ -660,7 +667,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 
 <div class="cards" style="margin-top: clamp(28px,4cqi,44px)">
-<div class="tc" data-rv="1"><div class="tc-ph"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg><span>[Tour photo]</span></div><div class="tc-b"><span class="tc-t">[Tour name goes here, usually running over two lines]</span><span class="tc-m">[0 hrs] &middot; [Pickup area] &middot; Joined Group</span><div class="tc-op"><img loading="lazy" decoding="async" class="tc-logo" src="/assets/logo.png" alt=""><span class="tc-opn">Love Nature Krabi Travel and Tour</span><img loading="lazy" decoding="async" class="tc-j" src="/assets/jai-thai-mark.png" alt="Jai Thai"><span class="tc-r"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"></path></svg> 4.5 <i>(79)</i></span></div></div><div class="tc-f"><span class="tc-price">From <b>&#3647;[0,000]</b> <i>/person</i></span><a class="tc-btn" href="#">Book now</a></div></div>
+<div class="tc" data-rv="1"><div class="tc-ph"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg><span>[Tour photo]</span></div><div class="tc-b"><span class="tc-t">[Tour name goes here, usually running over two lines]</span><span class="tc-m">[0 hrs] &middot; [Pickup area] &middot; Joined Group</span><div class="tc-op"><img loading="lazy" decoding="async" class="tc-logo" src="/assets/logo.png" alt="" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 7vw, 26px"><span class="tc-opn">Love Nature Krabi Travel and Tour</span><img loading="lazy" decoding="async" class="tc-j" src="/assets/jai-thai-mark.png" alt="Jai Thai" width="46" height="42"><span class="tc-r"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"></path></svg> 4.5 <i>(79)</i></span></div></div><div class="tc-f"><span class="tc-price">From <b>&#3647;[0,000]</b> <i>/person</i></span><a class="tc-btn" href="#">Book now</a></div></div>
 </div>
 <p class="muted" data-rv="1" style="margin-top: 20px; max-width: 680px">Hotel pickup, an English-speaking guide, caving and safety equipment, fruit and water are included. The national park entrance fee is not.</p>
 <div class="center" data-rv="1"><a class="btn btn-g" href="https://lovenaturekrabi.jaithaitravel.com">See our cave tour <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a></div>
@@ -764,9 +771,9 @@ body{margin:0;background:#FFFFFF}
 <a class="btn btn-o" href="/destinations" data-rv="1" style="transition-delay: .12s">All destinations</a>
 </div>
 <div class="near">
-<a class="place" href="/destinations/ao-thalane-mangrove" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/ao-thalane.jpg" alt="A guest paddling a kayak towards the limestone peaks of Ao Thalane"><span class="place-b"><span class="place-t">Ao Thalane Mangrove</span><span class="place-d">Another mainland day, by kayak.</span></span></a>
-<a class="place" href="/destinations/tiger-cave-temple" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/tiger-cave-temple.jpg" alt="Monkeys on the temple balustrade at Tiger Cave Temple, above the hills of Krabi"><span class="place-b"><span class="place-t">Tiger Cave Temple</span><span class="place-d">A temple and a big staircase near Krabi Town.</span></span></a>
-<a class="place" href="/destinations/hong-islands" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/hong-islands.jpg" alt="Aerial view of a limestone pillar in the green bay of the Hong Islands"><span class="place-b"><span class="place-t">Hong Islands</span><span class="place-d">The islands off this stretch of coast.</span></span></a>
+<a class="place" href="/destinations/ao-thalane-mangrove" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/ao-thalane.jpg" alt="A guest paddling a kayak towards the limestone peaks of Ao Thalane" width="840" height="1204" srcset="/assets/places/ao-thalane-400.webp 400w, /assets/places/ao-thalane-640.webp 640w, /assets/places/ao-thalane-840.webp 840w" sizes="(max-width: 719px) 90vw, 364px"><span class="place-b"><span class="place-t">Ao Thalane Mangrove</span><span class="place-d">Another mainland day, by kayak.</span></span></a>
+<a class="place" href="/destinations/tiger-cave-temple" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/tiger-cave-temple.jpg" alt="Monkeys on the temple balustrade at Tiger Cave Temple, above the hills of Krabi" width="840" height="1204" srcset="/assets/places/tiger-cave-temple-400.webp 400w, /assets/places/tiger-cave-temple-640.webp 640w, /assets/places/tiger-cave-temple-840.webp 840w" sizes="(max-width: 719px) 90vw, 364px"><span class="place-b"><span class="place-t">Tiger Cave Temple</span><span class="place-d">A temple and a big staircase near Krabi Town.</span></span></a>
+<a class="place" href="/destinations/hong-islands" data-rv="1"><img loading="lazy" decoding="async" src="/assets/places/hong-islands.jpg" alt="Aerial view of a limestone pillar in the green bay of the Hong Islands" width="840" height="1204" srcset="/assets/places/hong-islands-400.webp 400w, /assets/places/hong-islands-640.webp 640w, /assets/places/hong-islands-840.webp 840w" sizes="(max-width: 719px) 90vw, 364px"><span class="place-b"><span class="place-t">Hong Islands</span><span class="place-d">The islands off this stretch of coast.</span></span></a>
 </div>
 </div>
 </section>
@@ -789,7 +796,7 @@ body{margin:0;background:#FFFFFF}
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-brand">
-<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 26vw, 99px"></a>
 <span class="foot-tag">The best friend on your journey.</span>
 <div class="foot-meta"><span>211 Ao Nang, Mueang Krabi District, Krabi 81000, Thailand</span><span>TAT licence 33/10148</span></div>
 </div>

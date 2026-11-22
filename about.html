@@ -546,14 +546,21 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FFFFFF}
 .mapbox{overflow:hidden;border-radius:28px;background:#E9F1EC;padding:0}
 .mapbox iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.skip{position:absolute;left:12px;top:-80px;z-index:1000;background:#2E5C43;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
+:where(img[width][height]){width:auto;height:auto}
+a.chip{position:relative}
+a.chip::after{content:"";position:absolute;left:0;right:0;top:-9px;bottom:-9px}
 
 </style>
 </head>
 <body>
 <div class="lnk" data-lnk="1">
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav">
 <div class="wrap nav-in">
-<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 21vw, 78px"></a>
 <nav class="nav-links" aria-label="Main">
 <a class="nl" href="/">Home</a>
 <a class="nl" href="https://lovenaturekrabi.jaithaitravel.com">Tours</a>
@@ -639,7 +646,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 
 
 <section class="ab-hero" id="top">
@@ -655,7 +662,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 <div class="ab-hero-media" data-rv="z" style="transition-delay: .15s">
-<div class="ab-arch ph"><img src="/assets/about-hero.jpg" alt="One of our guides sitting on the bow of a longtail boat, looking out over clear blue water" style="object-position: 30% 50%"></div>
+<div class="ab-arch ph"><img src="/assets/about-hero.jpg" alt="One of our guides sitting on the bow of a longtail boat, looking out over clear blue water" style="object-position: 30% 50%" width="720" height="1280" srcset="/assets/about-hero-400.webp 400w, /assets/about-hero-640.webp 640w, /assets/about-hero-720.webp 720w" sizes="(max-width: 719px) 85vw, 369px"></div>
 <svg class="ab-badge" viewBox="0 0 132 132" role="img" aria-label="The best friend on your journey"><circle cx="66" cy="66" r="66" fill="#F2A541"></circle><g class="spin"><path id="lnk-arc" d="M66 66 m-47 0 a47 47 0 1 1 94 0 a47 47 0 1 1 -94 0" fill="none"></path><text font-family="Poppins, sans-serif" font-size="11.2" font-weight="600" letter-spacing="2.1" fill="#2C4F6B"><textPath href="#lnk-arc">THE BEST FRIEND ON YOUR JOURNEY ·</textPath></text></g><circle cx="66" cy="66" r="15" fill="#2C4F6B"></circle><path d="M51 62h12M69 67h12M54 72h9" stroke="#F2A541" stroke-width="3" stroke-linecap="round"></path></svg>
 </div>
 </div>
@@ -664,7 +671,7 @@ body{margin:0;background:#FFFFFF}
 <section class="sec" id="story">
 <div class="wrap ab-story">
 <div class="ab-portrait" data-rv="l">
-<div class="ab-frame"><img loading="lazy" decoding="async" src="/assets/photos/supaporn.jpg" alt="Supaporn Sueakaew, founder of Love Nature Krabi" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; border-radius: 28px; display: block"></div>
+<div class="ab-frame"><img loading="lazy" decoding="async" src="/assets/photos/supaporn.jpg" alt="Supaporn Sueakaew, founder of Love Nature Krabi" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; border-radius: 28px; display: block" width="640" height="640" srcset="/assets/photos/supaporn-400.webp 400w, /assets/photos/supaporn-640.webp 640w" sizes="(max-width: 719px) 86vw, 420px"></div>
 <div class="ab-name"><b>Supaporn Sueakaew</b><span>Founder, Love Nature Krabi</span></div>
 </div>
 <div class="ab-story-copy">
@@ -701,7 +708,7 @@ body{margin:0;background:#FFFFFF}
 <h2 class="disp h2" data-rv="1" style="transition-delay: .06s">The people who make your day</h2>
 <p class="lead" data-rv="1" style="transition-delay: .12s">There are ten of us, and every activity has someone who owns it. Here is who you will meet along the way.</p>
 </div>
-<div class="ab-team-ph" data-rv="z" style="overflow: hidden"><img loading="lazy" decoding="async" src="/assets/photos/team-with-trucks.jpg" alt="Part of the Love Nature Krabi team with the pickup trucks" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; display: block"></div>
+<div class="ab-team-ph" data-rv="z" style="overflow: hidden"><img loading="lazy" decoding="async" src="/assets/photos/team-with-trucks.jpg" alt="Part of the Love Nature Krabi team with the pickup trucks" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; display: block" width="907" height="1600" srcset="/assets/photos/team-with-trucks-400.webp 400w, /assets/photos/team-with-trucks-640.webp 640w, /assets/photos/team-with-trucks-907.webp 907w" sizes="(max-width: 719px) 85vw, 1060px"></div>
 <div class="tm-grid">
 <article class="tm" data-rv="1"><span class="tm-av" aria-hidden="true">Ao</span><div class="tm-tx"><b>Aom</b><span class="tm-role">Bookings</span><p>Your trip starts with Aom. She looks after your booking details and passes them to the team, so on the morning of your tour somebody already knows your name and where to find you.</p></div></article>
 <article class="tm" data-rv="1" style="transition-delay: .06s"><span class="tm-av" aria-hidden="true">A</span><div class="tm-tx"><b>A</b><span class="tm-role">Island trips lead</span><p>A runs our 4 Islands trips, with sea guides Far, Ja, Affan and Toy out on the boats. They are the ones watching the tide, so you get your walk across the sandbar when the sea allows it.</p></div></article>
@@ -733,7 +740,7 @@ body{margin:0;background:#FFFFFF}
 <section class="sec green" id="care">
 <svg class="board-deco" viewBox="0 0 120 300" fill="none" aria-hidden="true"><path d="M60 4 C 100 60, 112 150, 96 250 L 78 292 L 60 276 L 42 292 L 24 250 C 8 150, 20 60, 60 4 Z" stroke="#FFFFFF" stroke-width="5"></path></svg>
 <div class="wrap ab-care">
-<div class="ab-care-media ph" data-rv="l"><img loading="lazy" decoding="async" src="/assets/places/surin-islands.jpg" alt="A sea turtle swimming over a coral reef at the Surin Islands"></div>
+<div class="ab-care-media ph" data-rv="l"><img loading="lazy" decoding="async" src="/assets/places/surin-islands.jpg" alt="A sea turtle swimming over a coral reef at the Surin Islands" width="840" height="1204" srcset="/assets/places/surin-islands-400.webp 400w, /assets/places/surin-islands-640.webp 640w, /assets/places/surin-islands-840.webp 840w" sizes="(max-width: 719px) 90vw, 468px"></div>
 <div class="ab-care-copy">
 <span class="eyebrow" data-rv="1">Our plans</span>
 <h2 class="disp h2" data-rv="1" style="transition-delay: .06s">Looking after Krabi</h2>
@@ -832,7 +839,7 @@ body{margin:0;background:#FFFFFF}
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-brand">
-<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 26vw, 99px"></a>
 <span class="foot-tag">The best friend on your journey.</span>
 <div class="foot-meta"><span>211 Ao Nang, Mueang Krabi District, Krabi 81000, Thailand</span><span>TAT licence 33/10148</span></div>
 </div>

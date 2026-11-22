@@ -17,25 +17,37 @@
     root.querySelectorAll('[data-rv]').forEach(function (el) { io.observe(el); });
   }
 
-  // Hero video: play only the one that is visible (mobile or desktop)
+  // Hero video: after the page has loaded, fetch and play only the one that
+  // matches this screen (mobile or desktop). The poster image shows first.
   var vids = root.querySelectorAll('.hero-bg video');
+  var saveData = navigator.connection && navigator.connection.saveData;
+  var chosen = null;
   vids.forEach(function (v) {
     v.addEventListener('playing', function () { v.setAttribute('data-on', '1'); });
   });
   var pickVideo = function () {
+    if (reduce || saveData) return;
     vids.forEach(function (v) {
       var shown = window.getComputedStyle(v).display !== 'none';
-      v.muted = true;
-      if (shown && !reduce) {
+      if (shown && !chosen) {
+        chosen = v;
+        v.muted = true;
+        v.src = v.getAttribute('data-src');
+      }
+      if (v !== chosen) return;
+      if (shown) {
         if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
       } else if (!v.paused) {
         v.pause();
       }
     });
   };
-  var vt = null;
-  window.addEventListener('resize', function () { clearTimeout(vt); vt = setTimeout(pickVideo, 200); });
-  pickVideo();
+  if (vids.length) {
+    var vt = null;
+    window.addEventListener('resize', function () { clearTimeout(vt); vt = setTimeout(pickVideo, 200); });
+    if (document.readyState === 'complete') pickVideo();
+    else window.addEventListener('load', pickVideo);
+  }
 
   // Destinations rail: arrows, mouse drag, progress bar
   var rail = root.querySelector('.rail');

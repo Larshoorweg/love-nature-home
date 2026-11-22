@@ -462,7 +462,7 @@ a{color:#2E5C43}a:hover{color:#1F4330}
 .f-row{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
 .f-field{display:flex;flex-direction:column;gap:6px}
 .f-field label{font-size:.875rem;font-weight:500;color:#2C4F6B}
-.f-field label i{font-style:normal;font-weight:400;color:#9FB0BA}
+.f-field label i{font-style:normal;font-weight:400;color:#5E737F}
 .f-field input,.f-field textarea{width:100%;min-height:52px;padding:14px 16px;border-radius:14px;border:1.5px solid #C9D3DA;background:#FFFFFF;font-family:inherit;font-size:1rem;color:#1F2D36;transition:border-color .25s ease,box-shadow .25s ease}
 .f-field textarea{min-height:140px;resize:vertical}
 .f-field [aria-invalid="true"]{border-color:#B8402F;box-shadow:0 0 0 3px rgba(184,64,47,.12)}
@@ -510,14 +510,21 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FFFFFF}
 .mapbox{overflow:hidden;border-radius:28px;background:#E9F1EC;padding:0}
 .mapbox iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.skip{position:absolute;left:12px;top:-80px;z-index:1000;background:#2E5C43;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
+:where(img[width][height]){width:auto;height:auto}
+a.chip{position:relative}
+a.chip::after{content:"";position:absolute;left:0;right:0;top:-9px;bottom:-9px}
 
 </style>
 </head>
 <body>
 <div class="lnk" data-lnk="1">
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav">
 <div class="wrap nav-in">
-<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 21vw, 78px"></a>
 <nav class="nav-links" aria-label="Main">
 <a class="nl" href="/">Home</a>
 <a class="nl" href="https://lovenaturekrabi.jaithaitravel.com">Tours</a>
@@ -603,7 +610,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 
 
 <section class="ct-hero" id="top">
@@ -674,7 +681,7 @@ body{margin:0;background:#FFFFFF}
 <p class="ct-addr" data-rv="1" style="transition-delay: .12s">Love Nature Krabi Travel and Tour<br>Open every day, 7am to 10pm<br><a href="https://maps.app.goo.gl/wkUUgNZj74npAWNA7" target="_blank" rel="noopener">Find us on Google Maps</a></p>
 <p data-rv="1" style="transition-delay: .16s">You do not need to come to us. Hotel pickup is included on every tour.</p>
 </div>
-<div class="ct-map mapbox" data-rv="r"><iframe src="https://www.google.com/maps?q=Love+Nature+Krabi+Travel+and+Tours%2C+Krabi&amp;output=embed" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+<div class="ct-map mapbox" data-rv="r"><iframe src="https://www.google.com/maps?q=Love+Nature+Krabi+Travel+and+Tour%2C+Krabi&amp;output=embed" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
 </div>
 </section>
 
@@ -715,7 +722,7 @@ body{margin:0;background:#FFFFFF}
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-brand">
-<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 26vw, 99px"></a>
 <span class="foot-tag">The best friend on your journey.</span>
 <div class="foot-meta"><span>211 Ao Nang, Mueang Krabi District, Krabi 81000, Thailand</span><span>TAT licence 33/10148</span></div>
 </div>

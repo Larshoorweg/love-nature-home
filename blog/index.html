@@ -478,14 +478,21 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FFFFFF}
 .mapbox{overflow:hidden;border-radius:28px;background:#E9F1EC;padding:0}
 .mapbox iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.skip{position:absolute;left:12px;top:-80px;z-index:1000;background:#2E5C43;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
+:where(img[width][height]){width:auto;height:auto}
+a.chip{position:relative}
+a.chip::after{content:"";position:absolute;left:0;right:0;top:-9px;bottom:-9px}
 
 </style>
 </head>
 <body>
 <div class="lnk" data-lnk="1">
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav">
 <div class="wrap nav-in">
-<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="nav-logo" href="/" aria-label="Love Nature Krabi, home"><img src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 21vw, 78px"></a>
 <nav class="nav-links" aria-label="Main">
 <a class="nl" href="/">Home</a>
 <a class="nl" href="https://lovenaturekrabi.jaithaitravel.com">Tours</a>
@@ -571,7 +578,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 
 
 <section class="bl-hero" id="top">
@@ -589,7 +596,7 @@ body{margin:0;background:#FFFFFF}
 <span class="eyebrow" data-rv="1">Featured guide</span>
 </div>
 <a class="feat" href="/blog/post-template" data-rv="z">
-<div class="ph"><img loading="lazy" decoding="async" src="/assets/blog-krabi.jpg" alt="The beach and limestone cliffs at Railay, Krabi"></div>
+<div class="ph"><img loading="lazy" decoding="async" src="/assets/blog-krabi.jpg" alt="The beach and limestone cliffs at Railay, Krabi" width="783" height="375" srcset="/assets/blog-krabi-400.webp 400w, /assets/blog-krabi-640.webp 640w, /assets/blog-krabi-783.webp 783w" sizes="(max-width: 719px) 90vw, 647px"></div>
 <div class="feat-b">
 <span class="feat-tag">Krabi</span>
 <span class="feat-t">What to Do in Krabi: A Local's Insider Tips for an Unforgettable Trip</span>
@@ -609,9 +616,9 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 <div class="posts">
-<a class="post" href="/blog/post-template" data-rv="1"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-koh-lanta.jpg" alt="Two limestone islands off the coast near Koh Lanta"></div><span class="post-c">Koh Lanta</span><span><span class="post-t">Koh Lanta Travel Guide: Adventure, Relaxation, and Local Culture</span></span><span class="post-d">Explore Koh Lanta with this travel guide full of the best beaches, local culture, adventure ideas, and practical tips.</span></a>
-<a class="post" href="/blog/post-template" data-rv="1" style="transition-delay: .1s"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-night-market.jpg" alt="Stalls and string lights at a Krabi night market"></div><span class="post-c">Food and markets</span><span><span class="post-t">Your Ultimate Guide to Krabi Thailand Night Market Experience</span></span><span class="post-d">Discover the best of Krabi night market with top street food, shopping tips, and transportation advice.</span></a>
-<a class="post" href="/blog/post-template" data-rv="1" style="transition-delay: .2s"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-krabi.jpg" alt="The beach and limestone cliffs at Railay, Krabi"></div><span class="post-c">Krabi</span><span><span class="post-t">What to Do in Krabi: A Local's Insider Tips for an Unforgettable Trip</span></span><span class="post-d">Explore what to do in Krabi Thailand with top beaches, adventure activities, and natural wonders.</span></a>
+<a class="post" href="/blog/post-template" data-rv="1"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-koh-lanta.jpg" alt="Two limestone islands off the coast near Koh Lanta" width="783" height="375" srcset="/assets/blog-koh-lanta-400.webp 400w, /assets/blog-koh-lanta-640.webp 640w, /assets/blog-koh-lanta-783.webp 783w" sizes="(max-width: 719px) 90vw, 357px"></div><span class="post-c">Koh Lanta</span><span><span class="post-t">Koh Lanta Travel Guide: Adventure, Relaxation, and Local Culture</span></span><span class="post-d">Explore Koh Lanta with this travel guide full of the best beaches, local culture, adventure ideas, and practical tips.</span></a>
+<a class="post" href="/blog/post-template" data-rv="1" style="transition-delay: .1s"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-night-market.jpg" alt="Stalls and string lights at a Krabi night market" width="768" height="370" srcset="/assets/blog-night-market-400.webp 400w, /assets/blog-night-market-640.webp 640w, /assets/blog-night-market-768.webp 768w" sizes="(max-width: 719px) 90vw, 357px"></div><span class="post-c">Food and markets</span><span><span class="post-t">Your Ultimate Guide to Krabi Thailand Night Market Experience</span></span><span class="post-d">Discover the best of Krabi night market with top street food, shopping tips, and transportation advice.</span></a>
+<a class="post" href="/blog/post-template" data-rv="1" style="transition-delay: .2s"><div class="ph"><img loading="lazy" decoding="async" loading="lazy" src="/assets/blog-krabi.jpg" alt="The beach and limestone cliffs at Railay, Krabi" width="783" height="375" srcset="/assets/blog-krabi-400.webp 400w, /assets/blog-krabi-640.webp 640w, /assets/blog-krabi-783.webp 783w" sizes="(max-width: 719px) 90vw, 357px"></div><span class="post-c">Krabi</span><span><span class="post-t">What to Do in Krabi: A Local's Insider Tips for an Unforgettable Trip</span></span><span class="post-d">Explore what to do in Krabi Thailand with top beaches, adventure activities, and natural wonders.</span></a>
 </div>
 <p class="muted" data-rv="1" style="margin-top: 22px">[Placeholder. New posts appear here as they are published; the grid grows with them.]</p>
 </div>
@@ -664,7 +671,7 @@ body{margin:0;background:#FFFFFF}
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-brand">
-<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour"></a>
+<a class="foot-logo" href="/" aria-label="Love Nature Krabi, home"><img loading="lazy" decoding="async" src="/assets/logo.png" alt="Love Nature Krabi Travel and Tour" width="394" height="254" srcset="/assets/logo-120.webp 120w, /assets/logo-240.webp 240w, /assets/logo-394.webp 394w" sizes="(max-width: 719px) 26vw, 99px"></a>
 <span class="foot-tag">The best friend on your journey.</span>
 <div class="foot-meta"><span>211 Ao Nang, Mueang Krabi District, Krabi 81000, Thailand</span><span>TAT licence 33/10148</span></div>
 </div>
