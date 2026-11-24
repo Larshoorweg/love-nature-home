@@ -49,6 +49,16 @@
     else window.addEventListener('load', pickVideo);
   }
 
+  // Jai Thai badge: smooth scroll to the Jai Thai section
+  var jtb = root.querySelector('[data-jtb]');
+  var jts = root.querySelector('#jai-thai');
+  if (jtb && jts) {
+    jtb.addEventListener('click', function (e) {
+      e.preventDefault();
+      jts.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    });
+  }
+
   // Destinations rail: arrows, mouse drag, progress bar
   var rail = root.querySelector('.rail');
   if (rail) {
