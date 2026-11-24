@@ -307,6 +307,11 @@ a{color:#2E5C43}a:hover{color:#1F4330}
 .jts-copy{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 .jts-pts{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
 .jts-pts li{display:flex;gap:14px;align-items:flex-start;color:#DCE6EC}
+.jts-six{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;width:100%}
+.jts-six li{gap:10px;align-items:center;font-size:.9375rem;line-height:1.35}
+.jts-six i{width:24px;height:24px;margin-top:0}
+.jts-six i svg{width:13px;height:13px}
+.jts-note{margin:0;font-size:.9375rem;line-height:1.6;color:#C5D3DC}
 .jts-pts i{flex:none;width:28px;height:28px;border-radius:50%;background:#F2A541;color:#2C4F6B;display:flex;align-items:center;justify-content:center;margin-top:1px}
 .navy .tlink{color:#FBE3B4}
 .navy .tlink:hover{color:#FFFFFF}
@@ -441,6 +446,8 @@ a{color:#2E5C43}a:hover{color:#1F4330}
 .rev{grid-template-columns:minmax(0,.5fr) minmax(0,1.5fr);gap:64px}
 .book{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:72px;align-items:start}
 .jts-in{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:72px;align-items:start}
+.jts-six{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 24px}
+.jts-six li{font-size:1rem}
 .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
 .faq{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:72px}
 .faq .head{position:sticky;top:112px;align-self:start}
@@ -763,16 +770,21 @@ a.chip::after{content:"";position:absolute;left:0;right:0;top:-9px;bottom:-9px}
 <section class="jts navy" id="jai-thai">
 <div class="wrap jts-in">
 <div class="jts-head">
-<span class="eyebrow" data-rv="1">Why you see the Jai Thai name</span>
-<h2 class="disp h2" data-rv="1" style="transition-delay: .06s">We are part of Jai Thai</h2>
+<span class="eyebrow" data-rv="1">Jai Thai Verified</span>
+<h2 class="disp h2" data-rv="1" style="transition-delay: .06s">A verified member of Jai Thai</h2>
 <a class="jts-logo" href="https://jaithaitravel.com" target="_blank" rel="noopener" data-rv="1" style="transition-delay: .12s" aria-label="Jai Thai, opens jaithaitravel.com"><img loading="lazy" decoding="async" src="/assets/jai-thai-logo-white.svg" alt="Jai Thai"></a>
 </div>
 <div class="jts-copy">
-<p class="lead" data-rv="1">Jai Thai is a collective of small local operators in Thailand, working together in one network. We are one of them.</p>
-<ul class="jts-pts" data-rv="1" style="transition-delay: .08s">
-<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Jai Thai built the booking technology behind this website. That is why you get a Jai Thai account when you book.</span></li>
-<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>You still book directly with us, Love Nature Krabi. Only the technology comes from Jai Thai.</span></li>
+<p class="lead" data-rv="1">Jai Thai is a network of small local operators in Thailand. Before we could join, we were checked on six points.</p>
+<ul class="jts-pts jts-six" data-rv="1" style="transition-delay: .08s">
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Valid TAT licence</span></li>
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Guests insured on every tour</span></li>
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Licensed guides</span></li>
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Strong guest reviews</span></li>
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Visited and interviewed in person</span></li>
+<li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"></path></svg></i><span>Locally owned and run</span></li>
 </ul>
+<p class="jts-note" data-rv="1" style="transition-delay: .12s">Our online booking also runs on Jai Thai's system, which is why you get a Jai Thai account when you book. You still book directly with us, Love Nature Krabi.</p>
 <a class="tlink" href="https://jaithaitravel.com" target="_blank" rel="noopener" data-rv="1" style="transition-delay: .16s"><span>Read more about Jai Thai</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
